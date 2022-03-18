@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  abas:
+    docker:
+      - image: jruby:9.3
+
+    steps:
+    - checkout
+    - run: stop
+
+
+workflows:
+  version: 2
+  abas:
+    jobs:
+    - abas
